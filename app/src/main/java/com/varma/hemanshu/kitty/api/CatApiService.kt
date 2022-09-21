@@ -15,6 +15,6 @@ interface CatApiService {
         limit: Int = QUERY_PAGE_SIZE,
         @Query("api_key")
         apiKey: String = API_KEY
-    ): Response<CatResponse>
+    ): Response<List<CatResponse>>
 
 }
