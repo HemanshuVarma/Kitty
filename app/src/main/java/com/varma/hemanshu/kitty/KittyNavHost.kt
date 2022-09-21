@@ -2,15 +2,19 @@ package com.varma.hemanshu.kitty
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import com.varma.hemanshu.kitty.factory.ViewModelProviderFactory
 import com.varma.hemanshu.kitty.ui.screen.HomeScreen
 import com.varma.hemanshu.kitty.ui.screen.KittyDetailsScreen
 
 @Composable
 fun KittyNavHost(
-    navController: NavHostController, modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    navController: NavHostController,
+    viewModelFactory: ViewModelProviderFactory
 ) {
 
     NavHost(
@@ -19,7 +23,7 @@ fun KittyNavHost(
         composable(
             route = HomeScreen.route
         ) {
-            HomeScreen()
+            HomeScreen(homeViewModel = viewModel(factory = viewModelFactory))
         }
 
         composable(

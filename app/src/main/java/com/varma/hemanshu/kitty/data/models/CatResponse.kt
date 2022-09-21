@@ -1,4 +1,4 @@
-package com.varma.hemanshu.kitty.models
+package com.varma.hemanshu.kitty.data.models
 
 import com.google.gson.annotations.SerializedName
 

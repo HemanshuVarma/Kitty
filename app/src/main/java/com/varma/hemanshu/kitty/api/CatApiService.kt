@@ -1,6 +1,6 @@
 package com.varma.hemanshu.kitty.api
 
-import com.varma.hemanshu.kitty.models.CatResponse
+import com.varma.hemanshu.kitty.data.models.CatResponse
 import com.varma.hemanshu.kitty.util.Constants.API_KEY
 import com.varma.hemanshu.kitty.util.Constants.QUERY_PAGE_SIZE
 import retrofit2.Response
